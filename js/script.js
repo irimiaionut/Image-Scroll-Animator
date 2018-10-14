@@ -46,7 +46,7 @@ var imagesSRC = [
         var slide = image.getBoundingClientRect().top;
 
         if(slide > (image.height/-2) && slide < document.documentElement.clientHeight - (image.height/2) ){
-          let travel = (slide/(document.documentElement.clientHeight/100) + 20)/2;
+          let travel = 10 + (slide/(document.documentElement.clientHeight/100))/2;
 
           if(travel < 0 ){
             travel = 0;
