@@ -8,7 +8,7 @@ var block = '\
     </div>\
 \
     <div class="Instagram-card-image">\
-      <img src= "%imgsrc%" height=600px/>\
+      <img src= "%imgsrc%" height="auto"/>\
     </div>\
 \
     <div class="Instagram-card-content">\
@@ -46,13 +46,13 @@ var imagesSRC = [
         var slide = image.getBoundingClientRect().top;
 
         if(slide > (image.height/-2) && slide < document.documentElement.clientHeight - (image.height/2) ){
-          let travel = (slide/(document.documentElement.clientHeight/100) + 40);
+          let travel = (slide/(document.documentElement.clientHeight/100));
           if(travel < 0 ){
             travel = 0;
           }
 
-          if(travel > 100 ){
-            travel = 100;
+          if(travel > 50 ){
+            travel = 50;
           }
           image.style.webkitTransform = "translate3d(0px," + travel + "px,0px)";
         }

@@ -52,12 +52,12 @@ a{
 }
 
 .Instagram-card{
-	background: #ffffff;
-	border: 1px solid #f2f2f2;
-	border-radius: 3px;
-	width: 100%;
-	max-width: 600px;
-	margin: auto;
+    background: #ffffff;
+    border: 1px solid #f2f2f2;
+    border-radius: 3px;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
 }
 
 .Instagram-card-header{
@@ -141,9 +141,11 @@ hr{
   overflow: hidden;
 }
 .Instagram-card-image img{
-       margin-top: -100px;
-       transform: translate3d(0px,100px,0px);
+       margin-top: -50px;
+       transform: translate3d(0px,50px,0px);
        will-change: transform;
        backface-visibility: hidden;
        perspective: 1000;
+       width: 100%;
+       height: auto;
  }
