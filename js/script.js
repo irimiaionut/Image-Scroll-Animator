@@ -55,17 +55,16 @@ var imagesSRC = [
             travel = 100;
           }
           image.style.webkitTransform = "translate3d(0px," + travel + "px,0px)";
-          console.log(slide);
         }
     });
   }
 
 document.addEventListener("DOMContentLoaded", function(event) {
 
-  for(let i = 1; i <= 7; i++){
+  for(let i = 0; i <= 6; i++){
     document.body.innerHTML += block.replace('%imgsrc%', imagesSRC[i]);
   }
-  for(let i = 1; i <= 7; i++){
+  for(let i = 0; i <= 6; i++){
     document.body.innerHTML += block.replace('%imgsrc%', imagesSRC[i]);
   }
 
