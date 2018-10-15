@@ -41,19 +41,21 @@ var imagesSRC = [
   "resources/7.jpg"
 ];
 
-  function refreshImages(images){
+  function refreshImages(images, force){
     [].forEach.call(images, function(image) {
         var slide = image.getBoundingClientRect().top;
 
-        if(slide > (image.height/-2) && slide < document.documentElement.clientHeight - (image.height/2) ){
-          let travel = 10 + (slide/(document.documentElement.clientHeight/100))/2;
+        if((slide > (image.height/-2) && slide < document.documentElement.clientHeight - (image.height/2)) || force ){
+          let travel =  30 + (slide/(document.documentElement.clientHeight/70) * 2);
+
+          console.log(travel);
 
           if(travel < 0 ){
             travel = 0;
           }
 
-          if(travel > 50 ){
-            travel = 50;
+          if(travel > 130 ){
+            travel = 130;
           }
           image.style.webkitTransform = "translate3d(0px," + travel + "px,0px)";
         }
@@ -70,9 +72,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   var images = document.querySelectorAll('.Instagram-card-image img');
-  refreshImages(images);
+  refreshImages(images, true);
 
   window.addEventListener("scroll", function(e) {
-    refreshImages(images);
+    refreshImages(images, false);
   });
 });
