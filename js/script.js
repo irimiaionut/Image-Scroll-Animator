@@ -54,8 +54,8 @@ var imagesSRC = [
             travel = 0;
           }
 
-          if(travel > 130 ){
-            travel = 130;
+          if(travel > 100 ){
+            travel = 100;
           }
           image.style.webkitTransform = "translate3d(0px," + travel + "px,0px)";
         }

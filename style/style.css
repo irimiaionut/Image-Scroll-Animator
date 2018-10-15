@@ -141,7 +141,7 @@ hr{
   overflow: hidden;
 }
 .Instagram-card-image img{
-       margin-top: -130px;
+       margin-top: -100px;
        transform: translate3d(0px,50px,0px);
        will-change: transform;
        backface-visibility: hidden;
