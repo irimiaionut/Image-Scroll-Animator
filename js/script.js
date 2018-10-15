@@ -46,7 +46,7 @@ var imagesSRC = [
         var slide = image.getBoundingClientRect().top;
 
         if((slide > (image.height/-2) && slide < document.documentElement.clientHeight - (image.height/2)) || force ){
-          let travel =  30 + (slide/(document.documentElement.clientHeight/70) * 2);
+          let travel =  20 + (slide/(document.documentElement.clientHeight/100));
 
           console.log(travel);
 
@@ -54,8 +54,8 @@ var imagesSRC = [
             travel = 0;
           }
 
-          if(travel > 100 ){
-            travel = 100;
+          if(travel > 70 ){
+            travel = 70;
           }
           image.style.webkitTransform = "translate3d(0px," + travel + "px,0px)";
         }
